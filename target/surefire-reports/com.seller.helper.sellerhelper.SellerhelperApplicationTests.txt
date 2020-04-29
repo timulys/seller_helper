@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.seller.helper.sellerhelper.SellerhelperApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.179 s - in com.seller.helper.sellerhelper.SellerhelperApplicationTests

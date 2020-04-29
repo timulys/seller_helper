@@ -4,17 +4,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
-import javax.persistence.*;
-
-@Entity
 @Data
-@Table(name = "tbl_keyword")
 @ToString
 @EqualsAndHashCode
 public class Keyword extends BaseEntity {
-    @Id
-    @GeneratedValue
-    @Column(name = "KEYWORD_ID")
     private Long id;
     private String keyword;     // 사용자 입력 키워드
     private int shopCnt;        // 총 스토어 수(광고 모두 포함) - Naver
