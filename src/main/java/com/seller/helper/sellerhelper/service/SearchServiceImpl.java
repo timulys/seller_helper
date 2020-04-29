@@ -28,7 +28,8 @@ public class SearchServiceImpl implements SearchService {
 
         // result VO
         searchResultDTO.setShopCnt(getShopCnt(searchDTO.getKeyword()));
-        searchResultDTO.setRate(searchResultDTO.getShopCnt() / searchResultDTO.getSearchCnt());
+        double rate = ((double) (searchResultDTO.getShopCnt())) / ((double) searchResultDTO.getSearchCnt());
+        searchResultDTO.setRate(Math.round(rate * 100) / 100.0);
 
         return searchResultDTO;
     }
