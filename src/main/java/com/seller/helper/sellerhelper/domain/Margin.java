@@ -1,6 +1,9 @@
 package com.seller.helper.sellerhelper.domain;
 
-import lombok.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @Data
 @RequiredArgsConstructor

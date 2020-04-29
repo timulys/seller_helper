@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/index.js"></script>
+<script src="/jquery-3.5.0.min.js"></script>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>KEYWORD MVP SERVICE</h1>
+    <div class="container">
+        <div>
+            <h2>- API 정보 -</h2>
+            <label>내 계정 : <input type="text" id="customerId" placeholder="Secret Key"/></label>&nbsp
+            <label>엑세스라이선스 : <input type="text" id="accLicense" placeholder="Access License Key"/></label>&nbsp
+            <label>비밀키 : <input type="text" id="secretKey" placeholder="Secret Key"/></label>
+        </div>
+        <div>
+            <h2>- KEYWORD -</h2>
+            <input type="text" id="keyword" placeholder="키워드를 입력해주세요."/>
+            <button onclick="searchKeyword()">검색</button>
+        </div>
+    </div>
+    <div class="container content">
+        <table>
+            <thead>
+            <tr>
+                <th style="background-color: lightgray;">키워드</th>
+                <th style="background-color: lightgray;">월간 검색 건수</th>
+                <th style="background-color: lightgray;">총 등록 건수</th>
+                <th style="background-color: lightgray;">검색 경쟁률</th>
+                <th style="background-color: lightgray;">월간 평균 클릭수</th>
+                <th style="background-color: lightgray;">월간 평균 클릭률</th>
+                <th style="background-color: lightgray;">광고 노출수</th>
+                <th style="background-color: lightgray;">경쟁강도</th>
+            </tr>
+            </thead>
+            <tbody id="resultTable">
+                <!-- 검색 결과 컨텐츠 -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
