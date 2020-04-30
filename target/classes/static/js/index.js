@@ -5,14 +5,9 @@ function searchKeyword() {
     KeywordSearchDTO.secretKey = $("#secretKey").val();
     KeywordSearchDTO.keyword = $("#keyword").val();
 
-    if (KeywordSearchDTO.customerId == "")
-        alert("계정 정보를 입력해주세요.")
-    else if (KeywordSearchDTO.accLicense == "")
-        alert("엑세스 라이선스를 입력해주세요.");
-    else if (KeywordSearchDTO.secretKey == "")
-        alert("비밀키를 입력해주세요.");
-    else if (KeywordSearchDTO.keyword == "")
+    if (KeywordSearchDTO.keyword == "") {
         alert("키워드를 입력해주세요.");
+    }
     else {
         $.ajax({
             type: "GET",
