@@ -39,6 +39,8 @@ function makeDataTable(data) {
     template += "<td>";
     if (data.rate < 1) {
         template += "<label class='goodKeyword'>" + data.rate + "%</label>";
+    } else if (data.rate > 5) {
+        template += "<label class='badKeyword'>" + data.rate + "%</label>";
     } else {
         template += data.rate + "%";
     }

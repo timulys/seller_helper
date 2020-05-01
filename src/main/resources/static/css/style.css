@@ -24,6 +24,10 @@ table, th, td {
     color: blue;
     font-weight: bold;
 }
+.badKeyword {
+    color: red;
+    font-weight: bold;
+}
 .footer {
     position: absolute;
     left: 0;
