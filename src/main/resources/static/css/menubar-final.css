@@ -1,0 +1,25 @@
+#nav {
+	width:auto;
+	height:100px;
+	background-color:lightgray;
+}
+#nav ul {
+	/* background-color:yellow */ 
+	display:inline;
+	padding-left:0px;
+	float:right;
+	margin: 10px 10px 10px 10px;
+}
+#nav ul li{
+	display:inline;
+	border-left: 1px solid black;
+	padding:0px 7px 0px 10px;
+}
+#nav ul li:first-child {
+	border-left: none;
+}
+#nav ul li a {
+	text-decoration:none;
+	font-weight: bold;
+	color:white;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/menubar-final.css">
+<script src="/js/margin.js"></script>
+<script src="/jquery-3.5.0.min.js"></script>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KEYWORD MVP SERVICE</title>
+</head>
+<body>
+<div id="nav">
+    <h1 style="text-align: center">KEYWORD MVP SERVICE</h1>
+    <ul>
+        <li><a href="/keyword">키워드 분석</a></li>
+        <li><a href="/margin">마진 계산기</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div>
+        <h2>- Margin Calculator -</h2>
+
+    </div>
+    <div class="container">
+        <div>
+            <input type="radio" name="category" checked="">위탁
+            <input type="radio" name="category">사입
+            <input type="radio" name="category">구매대행
+        </div>
+        <div id="commision">
+            <h3>위탁 마진 계산기</h3>
+            <label>거래처 판매가 : <input type="text" class="price" id="originPrice"/> 원</label><br />
+            <label>거래처 택배비 : <input type="text" class="price" id="orderFee"/> 원</label><br />
+            <label>플랫폼 수수료 : <input type="text" class="price" id="platformFee"/> %</label><br />
+            <hr width="60%"/>
+            <label>셀러 택배비용 : <input type="text" class="price" id="sellerOrderFee"/> 원</label><br />
+            <label>셀러 판매금액 : <input type="text" class="price" id="sellerMarginPrice"/> 원</label><br />
+        </div>
+        <div id="domestic" style="display: none;">
+            <h3>사입 마진 계산기</h3>
+        </div>
+        <div id="overseas" style="display: none;">
+            <h3>구매대행 마진 계산기</h3>
+        </div>
+        <br />
+        <button onclick="calculate()">계산하기</button>
+    </div>
+</div>
+<div class="container" id="marginArea">
+    <h3>마진 계산</h3>
+    <label>상품 매입원가 : <input type="text" class="price" id="sellBuy"/> 원</label><br />
+    <label>플랫폼 수수료 : <input type="text" class="price" id="calPlatformFee"/> 원</label><br />
+    <label>셀러 마진금액 : <input type="text" class="price" id="sellPrice"/> 원</label><br />
+    <label>셀러의 마진률 : <input type="text" class="price" id="sellMarginRate"/> %</label><br />
+    <br />
+    <button onclick="init()">다시 계산하기</button>
+</div>
+<div id="footer">
+    <nav style="text-align: center">
+        <h2>건의 및 제안 : timulys@naver.com</h2>
+        <span>copyright. 티뮬리스(timulys)</span>
+    </nav>
+</div>
+</body>
+</html>

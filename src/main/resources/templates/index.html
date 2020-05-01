@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/menubar-final.css">
 <script src="/js/index.js"></script>
 <script src="/jquery-3.5.0.min.js"></script>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -9,7 +10,13 @@
     <title>KEYWORD MVP SERVICE</title>
 </head>
 <body>
-    <h1>KEYWORD MVP SERVICE</h1>
+    <div id="nav">
+        <h1 style="text-align: center">KEYWORD MVP SERVICE</h1>
+        <ul>
+            <li><a href="/keyword">키워드 분석</a></li>
+            <li><a href="/margin">마진 계산기</a></li>
+        </ul>
+    </div>
     <div class="container">
         <div>
             <h2>- KEYWORD -</h2>
@@ -17,7 +24,7 @@
             <button onclick="searchKeyword()">검색</button>
         </div>
     </div>
-    <div class="container content">
+    <div class="container">
         <table>
             <thead>
             <tr>
@@ -36,11 +43,11 @@
             </tbody>
         </table>
     </div>
-    <div class="footer">
-        <nav>
-            <h3>건의 및 제안 : timulys@naver.com</h3>
+    <div id="footer">
+        <nav style="text-align: center">
+            <h2>건의 및 제안 : timulys@naver.com</h2>
+            <span>copyright. 티뮬리스(timulys)</span>
         </nav>
-        <div class="copyright">copyright. 티뮬리스(timulys)</div>
     </div>
 </body>
 </html>

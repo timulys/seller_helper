@@ -11,6 +11,9 @@ label {
     /* To make sure that all label have the same size and are properly align */
     text-align: right;
 }
+.price {
+    margin: 10px;
+}
 .container {
     text-align: center;
 }
@@ -35,4 +38,28 @@ table, th, td {
     width: 100%;
     padding: 15px 0;
     text-align: center;
+}
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+#wrapper {
+    position:relative;
+    min-height:100%;
+}
+#header {
+    height:70px;
+    background:#ccc;
+}
+#container {
+    padding:20px;
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:100px;
+    background:#ccc;
 }
