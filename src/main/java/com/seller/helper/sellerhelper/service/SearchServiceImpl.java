@@ -18,7 +18,7 @@ import java.net.URLEncoder;
 public class SearchServiceImpl implements SearchService {
     //
     private static final String BASE_URL = "https://api.naver.com";
-    private static final String SHOP_URL = "https://search.shopping.naver.com/search/all.nhn?query=";
+    private static final String SHOP_URL = "https://search.shopping.naver.com/search/all?";
 
     @Override
     public SearchResultDTO getSearchDTO(KeywordSearchDTO searchDTO) {
@@ -103,12 +103,12 @@ public class SearchServiceImpl implements SearchService {
 
     private int getShopCnt(String keyword) {
         try {
-            Document doc = Jsoup.connect(String.format(SHOP_URL + keyword + "&cat_id=&frm=NVSHATC", "UTF-8"))
+            Document doc = Jsoup.connect(String.format(SHOP_URL + "where=all&frm=NVSHATC&query=" + keyword, "UTF-8"))
                     .header("Accept-Language", "ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4")
                     .timeout(999999)
                     .get();
-            if (doc.body().getElementsByClass("_productSet_total").size() > 0) {
-                String shopCnt = doc.body().getElementsByClass("_productSet_total").get(0).text().replaceAll("전체", ""); // shop cnt
+            if (doc.body().getElementsByClass("subFilter_num__2x0jq").size() > 0) {
+                String shopCnt = doc.body().getElementsByClass("subFilter_num__2x0jq").get(0).text().replaceAll("전체", ""); // shop cnt
                 return Integer.parseInt(shopCnt.replaceAll(",", ""));
             }
         } catch (Exception e) {
